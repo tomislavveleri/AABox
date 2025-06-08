@@ -1,0 +1,656 @@
+body {
+  background-color: hsl(0, 0%, 84%);
+
+  justify-self: center;
+}
+
+header {
+  display: flex;
+  justify-content: center;
+  margin-left: 15%;
+  width: 70%;
+
+  color: rgb(244, 122, 31);
+  border-radius: 20px;
+  background-color: white;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.6);
+  font-family: "Varela", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+header h1 {
+  text-shadow: 0 4px 20px rgba(0, 0, 0, 1);
+}
+
+.mainContainer {
+  max-width: 90%;
+  height: auto;
+  margin-top: 5%;
+  margin-left: 2%;
+  padding: 5% 2%;
+}
+.align {
+  margin-top: 20%;
+  display: grid;
+  grid-row: repeat(2, 1fr);
+}
+.slideKontakt {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+  max-width: 2000px;
+  width: 100%;
+}
+.kontakt {
+  background-color: rgb(244, 122, 31);
+  font-family: "Varela", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  border-radius: 12px;
+  color: #fff;
+  text-align: center;
+
+  grid-column: 2;
+}
+.kontakt h1 {
+  font-size: xxx-large;
+  color: #ffee00;
+}
+.kontakt p {
+  font-size: xx-large;
+}
+.slideShow {
+  width: 100%;
+  max-width: 1000px;
+  position: relative;
+  grid-column: 1;
+}
+.slide {
+  display: flex;
+  aspect-ratio: 16/9;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+  box-shadow: 0 1.5rem 3rem -0.75rem hsla(0, 0%, 0%, 0.25);
+  border-radius: 0.5rem;
+}
+.slide img {
+  flex: 1 0 100%;
+  scroll-snap-align: start;
+  object-fit: cover;
+}
+.slideNav {
+  display: flex;
+  column-gap: 1rem;
+  position: absolute;
+  bottom: 1.25rem;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 1;
+}
+.slideNav a {
+  width: 0.5rem;
+  height: 0.5rem;
+  border-radius: 50%;
+  background-color: #fff;
+  opacity: 0.75;
+  transition: opacity ease 250ms;
+}
+.slideNav a:hover {
+  opacity: 1;
+}
+.containerGodine {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.6);
+  background-color: rgb(244, 122, 31);
+  border-radius: 12px;
+  color: rgb(255, 255, 255);
+  padding: 10px;
+  border-radius: 12px;
+  text-align: center;
+  grid-row: 1;
+  width: 100%;
+  max-width: 500px;
+  margin: 5% auto;
+  animation: appear linear;
+  animation-timeline: view();
+  animation-range: entry 0% cover 40%;
+}
+.containerGodine h1 {
+  font-size: xxx-large;
+  font-family: "Varela", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  text-shadow: 0 4px 20px rgba(0, 0, 0, 1);
+}
+.containerGodine span {
+  font-size: 150px;
+  font-family: "Varela", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  text-shadow: 0 4px 20px rgba(0, 0, 0, 1);
+  color: #ffee00;
+}
+.containerDostave {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.6);
+  border-radius: 12px;
+  color: rgb(255, 255, 255);
+  padding: 20px;
+  border-radius: 12px;
+
+  background-color: rgb(244, 122, 31);
+  grid-row: 1;
+  width: 100%;
+  max-width: 500px;
+  margin: 5% auto;
+  animation: appear linear;
+  animation-timeline: view();
+  animation-range: entry 0;
+}
+.containerDostave h1 {
+  font-size: xxx-large;
+  font-family: "Varela", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  text-shadow: 0 4px 20px rgba(0, 0, 0, 1);
+}
+.containerDostave span {
+  font-size: 70px;
+  font-family: "Varela", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  text-shadow: 0 4px 20px rgba(0, 0, 0, 1);
+  color: #ffee00;
+}
+.containerRute {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.6);
+  border-radius: 12px;
+  color: rgb(255, 255, 255);
+  padding: 20px;
+  border-radius: 12px;
+  width: 100%;
+  max-width: 2000px;
+  margin-left: 10%;
+  height: auto;
+  margin: 8% auto;
+  background-color: rgb(244, 122, 31);
+  text-align: center;
+  animation: appear linear;
+  animation-timeline: view();
+  animation-range: entry 0% cover 40%;
+}
+.containerRute p {
+  font-size: xxx-large;
+  font-family: "Varela", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  text-shadow: 0 4px 20px rgba(0, 0, 0, 1);
+}
+.opisi {
+  display: grid;
+  grid-row: repeat(4, 1fr);
+  grid-column: repeat(2, 1fr);
+  max-width: 80%;
+  margin-left: 12.8%;
+  margin-top: 10%;
+}
+
+.cesta {
+  position: absolute;
+  pointer-events: none;
+  height: 2500px;
+  width: 100px;
+  margin-left: 36%;
+  transform: translateX(-50%);
+
+  background-color: #5f6365; /* road base */
+  border-left: 2px solid orange;
+  border-right: 2px solid orange;
+
+  z-index: 0;
+  pointer-events: none;
+}
+
+.cesta::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 4px;
+  height: 100%;
+  background: repeating-linear-gradient(
+    to bottom,
+    orange,
+    orange 10px,
+    transparent 10px,
+    transparent 20px
+  );
+}
+@keyframes appear {
+  from {
+    opacity: 0;
+    transform: translateX(-100px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0px);
+  }
+}
+
+.opis1 {
+  width: 100%;
+  max-width: 600px;
+  margin-right: 50%;
+
+  background-color: rgb(244, 122, 31);
+
+  border-radius: 12px;
+  color: rgb(255, 255, 255);
+  font-size: xx-large;
+  font-family: "Varela", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  text-shadow: 0 4px 20px rgba(0, 0, 0, 1);
+  grid-row: 1;
+  grid-column: 1;
+  text-align: center;
+
+  animation: appear linear;
+  animation-timeline: view();
+  animation-range: entry 0% cover 40%;
+}
+.opis1 h1 {
+  font-size: xx-large;
+  color: #ffee00;
+}
+.opis2 {
+  width: 100%;
+  max-width: 600px;
+  margin: 5% 0%;
+
+  background-color: rgb(244, 122, 31);
+  text-align: center;
+  border-radius: 12px;
+  color: rgb(255, 255, 255);
+  font-size: xx-large;
+  font-family: "Varela", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  text-shadow: 0 4px 20px rgba(0, 0, 0, 1);
+  grid-row: 2;
+  grid-column: 2;
+  animation: appear linear;
+  animation-timeline: view();
+  animation-range: entry 0% cover 40%;
+}
+.opis2 h1 {
+  font-size: xx-large;
+  color: #ffee00;
+}
+.opis3 {
+  width: 100%;
+  max-width: 600px;
+  margin-right: 50%;
+  background-color: rgb(244, 122, 31);
+  text-align: center;
+  border-radius: 12px;
+  color: rgb(255, 255, 255);
+  font-size: xx-large;
+  font-family: "Varela", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  text-shadow: 0 4px 20px rgba(0, 0, 0, 1);
+  grid-row: 3;
+  grid-column: 1;
+  animation: appear linear;
+  animation-timeline: view();
+  animation-range: entry 0% cover 40%;
+}
+.opis3 h1 {
+  font-size: xx-large;
+  color: #ffee00;
+}
+.opis4 {
+  width: 100%;
+  max-width: 600px;
+  margin: 5% 0%;
+
+  text-align: center;
+  background-color: rgb(244, 122, 31);
+
+  border-radius: 12px;
+  color: rgb(255, 255, 255);
+  font-size: xx-large;
+  font-family: "Varela", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  text-shadow: 0 4px 20px rgba(0, 0, 0, 1);
+  grid-row: 4;
+  grid-column: 2;
+  animation: appear linear;
+  animation-timeline: view();
+  animation-range: entry 0% cover 30%;
+}
+.opis4 h1 {
+  font-size: xx-large;
+  color: #ffee00;
+}
+
+@media (max-width: 600px) {
+  body {
+    background-color: hsl(0, 0%, 84%);
+    max-width: 50%;
+
+    margin-left: -10%;
+  }
+  header {
+    display: flex;
+    justify-content: center;
+    margin-left: 50%;
+    width: 20%;
+
+    color: rgb(244, 122, 31);
+    border-radius: 20px;
+    background-color: white;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.6);
+    font-family: "Varela", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+  }
+
+  .logo {
+    width: 700%;
+    border-radius: 20px;
+  }
+
+  .slideKontakt {
+    display: flex;
+    margin-left: 10%;
+  }
+  .kontakt {
+    background-color: rgb(244, 122, 31);
+    font-family: "Varela", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    border-radius: 12px;
+    color: #fff;
+    text-align: start;
+    padding-left: 20%;
+    padding-right: 20%;
+
+    grid-column: 1;
+  }
+  .kontakt h1 {
+    font-size: x-large;
+    color: #ffee00;
+    text-align: center;
+  }
+  .kontakt p {
+    font-size: medium;
+  }
+  .slideShow {
+    display: none;
+  }
+  .align {
+    margin-top: 20%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    margin-left: 20%;
+  }
+  .containerGodine {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.6);
+    background-color: rgb(244, 122, 31);
+    border-radius: 12px;
+    color: rgb(255, 255, 255);
+    padding-left: 16%;
+    padding-right: 16%;
+    border-radius: 12px;
+    text-align: center;
+    grid-column: 1;
+    width: 100%;
+    max-width: 500px;
+    margin: 5% auto;
+    animation: appear linear;
+    animation-timeline: view();
+    animation-range: entry 0% cover 40%;
+  }
+  .containerGodine h1 {
+    font-size: x-large;
+    font-family: "Varela", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    text-shadow: 0 4px 20px rgba(0, 0, 0, 1);
+  }
+  .containerGodine span {
+    font-size: x-large;
+    font-family: "Varela", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    text-shadow: 0 4px 20px rgba(0, 0, 0, 1);
+    color: #ffee00;
+  }
+  .containerDostave {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.6);
+    border-radius: 12px;
+    color: rgb(255, 255, 255);
+    padding: 20px;
+    border-radius: 12px;
+
+    background-color: rgb(244, 122, 31);
+    grid-row: 2;
+    width: 100%;
+    max-width: 500px;
+    margin: 5% auto;
+    animation: appear linear;
+    animation-timeline: view();
+    animation-range: entry 0;
+  }
+  .containerDostave h1 {
+    font-size: x-large;
+    font-family: "Varela", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    text-shadow: 0 4px 20px rgba(0, 0, 0, 1);
+  }
+  .containerDostave span {
+    font-size: x-large;
+    font-family: "Varela", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    text-shadow: 0 4px 20px rgba(0, 0, 0, 1);
+    color: #ffee00;
+  }
+
+  .containerRute {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.6);
+    border-radius: 12px;
+    color: rgb(255, 255, 255);
+    padding: 20px;
+    border-radius: 12px;
+    width: 100%;
+    max-width: 2000px;
+    margin-left: 20%;
+    padding-left: 20%;
+    padding-right: 16%;
+    height: auto;
+    margin: 8% auto;
+    background-color: rgb(244, 122, 31);
+    text-align: center;
+    animation: appear linear;
+    animation-timeline: view();
+    animation-range: entry 0% cover 40%;
+  }
+  .containerRute p {
+    font-size: small;
+    font-family: "Varela", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    text-shadow: 0 4px 20px rgba(0, 0, 0, 1);
+  }
+  .opisi {
+    display: grid;
+    grid-row: repeat(4, 1fr);
+    grid-column: repeat(2, 1fr);
+    max-width: 80%;
+    margin-left: -14%;
+    margin-top: 10%;
+  }
+  .opis1 {
+    width: 100%;
+    max-width: 600px;
+    margin-left: 0;
+    padding-left: 40%;
+    padding-right: 40%;
+    background-color: rgb(244, 122, 31);
+
+    border-radius: 12px;
+    color: rgb(255, 255, 255);
+    font-size: large;
+    font-family: "Varela", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    text-shadow: 0 4px 20px rgba(0, 0, 0, 1);
+    grid-row: 1;
+    grid-column: 1;
+    text-align: s;
+
+    animation: appear linear;
+    animation-timeline: view();
+    animation-range: entry 0% cover 40%;
+  }
+  .opis1 h1 {
+    font-size: x-large;
+    color: #ffee00;
+  }
+  .opis2 {
+    width: 100%;
+    max-width: 600px;
+    padding-left: 10%;
+    padding-right: 10%;
+    background-color: rgb(244, 122, 31);
+    text-align: center;
+    border-radius: 12px;
+    color: rgb(255, 255, 255);
+    font-size: medium;
+    font-family: "Varela", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    text-shadow: 0 4px 20px rgba(0, 0, 0, 1);
+    grid-row: 2;
+    grid-column: 1;
+    animation: appear linear;
+    animation-timeline: view();
+    animation-range: entry 0% cover 40%;
+  }
+  .opis2 h1 {
+    font-size: x-large;
+    color: #ffee00;
+  }
+  .opis3 {
+    width: 100%;
+    max-width: 600px;
+    margin-right: 50%;
+    padding-left: 10%;
+    padding-right: 10%;
+    background-color: rgb(244, 122, 31);
+    text-align: center;
+    border-radius: 12px;
+    color: rgb(255, 255, 255);
+    font-size: medium;
+    font-family: "Varela", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    text-shadow: 0 4px 20px rgba(0, 0, 0, 1);
+    grid-row: 3;
+    grid-column: 1;
+    animation: appear linear;
+    animation-timeline: view();
+    animation-range: entry 0% cover 40%;
+  }
+  .opis3 h1 {
+    font-size: x-large;
+    color: #ffee00;
+  }
+  .opis4 {
+    width: 100%;
+    max-width: 600px;
+    margin: 5% 0%;
+
+    text-align: center;
+    background-color: rgb(244, 122, 31);
+    padding-left: 10%;
+    padding-right: 10%;
+    border-radius: 12px;
+    color: rgb(255, 255, 255);
+    font-size: medium;
+    font-family: "Varela", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    text-shadow: 0 4px 20px rgba(0, 0, 0, 1);
+    grid-row: 4;
+    grid-column: 1;
+    animation: appear linear;
+    animation-timeline: view();
+    animation-range: entry 0% cover 30%;
+  }
+  .opis4 h1 {
+    font-size: x-large;
+    color: #ffee00;
+  }
+  .cesta {
+    position: absolute;
+    pointer-events: none;
+    height: 2500px;
+    width: 100px;
+    margin-left: 36%;
+    transform: translateX(-50%);
+
+    background-color: #5f6365; /* road base */
+    border-left: 2px solid orange;
+    border-right: 2px solid orange;
+
+    z-index: 0;
+    pointer-events: none;
+  }
+
+  .cesta::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 4px;
+    height: 100%;
+    background: repeating-linear-gradient(
+      to bottom,
+      orange,
+      orange 10px,
+      transparent 10px,
+      transparent 20px
+    );
+  }
+}
